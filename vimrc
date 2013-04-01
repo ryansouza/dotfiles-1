@@ -11,6 +11,8 @@ call vundle#rc()
 "manage vundle with vundle
 Bundle 'gmarik/vundle'
 
+"Shows the git diff status in the 'gutter' column
+Bundle 'airblade/vim-gitgutter'
 "The solarized color scheme
 Bundle 'altercation/vim-colors-solarized'
 "Powerline, a status line on steriods
