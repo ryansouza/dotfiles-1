@@ -217,6 +217,9 @@ let g:Powerline_symbols = 'fancy'
 "stop wrappin'
 set nowrap
 
+"Map capital W to lower case w because fast fingers
+command W w
+
 "get rid of all that wailing trightspace.
 map  <Leader>wt      :%s/\v\s+$//<CR>
 map! <Leader>wt <esc>:%s/\v\s+$//<CR>i
