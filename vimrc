@@ -195,7 +195,7 @@ set guioptions-=T
 set guioptions-=r
 set guioptions-=L
 "font font font with powerline support
-set guifont=Inconsolata\ for\ Powerline:h14
+set guifont=Anonymous\ Pro-Powerline:h18
 
 "no backup or swap files please
 set nobackup
