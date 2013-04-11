@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if [[ $# -eq 0 ]]; then
+  if mvim --serverlist | egrep -i "^$(basename $(pwd))$"; then
+    osascript -e 'tell application "MacVim" to activate' > /dev/null 2>&1
+  else
+    mvim -c "e ." --servername $(basename $(pwd))
+  fi
+else
+  mvim -c "wincmd l" --servername $(basename $(pwd)) --remote "$@" 1>/dev/null 2>&1
+fi

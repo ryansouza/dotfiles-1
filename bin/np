@@ -1,0 +1,6 @@
+#!/bin/sh
+
+git config --global --replace-all user.name "James Rucker"
+git config --global --replace-all user.email "jgrucker@gmail.com"
+
+echo '~/.gitconfig author written: "James Rucker <jgrucker@gmail.com>"'
