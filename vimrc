@@ -59,6 +59,8 @@ Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'vim-scripts/IndexedSearch'
 "Extends % to do the right thing in HTML & LaTeX among others
 Bundle 'vim-scripts/matchit.zip'
+"Rust syntax & indent settings
+Bundle 'wting/rust.vim'
 
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
