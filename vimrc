@@ -229,3 +229,6 @@ map! <Leader>wt <esc>:%s/\v\s+$//<CR>i
 "shortcuts for Buffer Explorer and NERDTree
 nnoremap <Leader>b :BufExplorer<cr>
 nnoremap <Leader>n :NERDTreeToggle<cr>
+
+"never show me tooltips WTF
+set noballooneval
