@@ -1,6 +1,6 @@
 #!/bin/sh
 CURRENT=`git branch | grep "*" | awk '{print $2}'`
 git checkout master
-git pull
+git pull || (echo "\nPulling on master failed!!!\n" && git checkout ${CURRENT} && exit)
 git checkout ${CURRENT}
 git rebase master
