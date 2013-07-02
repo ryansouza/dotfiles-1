@@ -61,6 +61,8 @@ Bundle 'vim-scripts/IndexedSearch'
 Bundle 'vim-scripts/matchit.zip'
 "Rust syntax & indent settings
 Bundle 'wting/rust.vim'
+"Bats file highlighting
+Bundle 'markcornick/vim-bats'
 
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
