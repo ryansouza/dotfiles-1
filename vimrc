@@ -234,4 +234,6 @@ nnoremap <Leader>b :BufExplorer<cr>
 nnoremap <Leader>n :NERDTreeToggle<cr>
 
 "never show me tooltips WTF
-set noballooneval
+if has('gui_running')
+  set noballooneval
+endif
