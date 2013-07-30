@@ -142,6 +142,8 @@ let g:syntastic_auto_loc_list=2
 "nerdtree settings
 let g:NERDTreeMouseMode = 2
 let g:NERDTreeWinSize = 40
+let g:NERDTreeIgnore=['\.DS_Store$', '\.vim$', '.d$[[dir]]', '\.rbc$', '\~$']
+let g:NERDTreeMapOpenSplit = 'i'
 
 "map Q to something useful
 noremap Q gq
@@ -185,9 +187,6 @@ autocmd BufReadPost fugitive://*
   \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
   \   nnoremap <buffer> .. :edit %:h<CR> |
   \ endif
-
-let g:NERDTreeMapOpenSplit = 'i'
-let NERDTreeIgnore=['\.rbc$']
 
 " JELLYBEANS!
 colorscheme jellybeans
