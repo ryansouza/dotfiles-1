@@ -15,6 +15,8 @@ Bundle 'gmarik/vundle'
 Bundle 'airblade/vim-gitgutter'
 "The solarized color scheme
 Bundle 'altercation/vim-colors-solarized'
+"Mirror of the official golang vim bundle
+Bundle 'jnwhiteh/vim-golang'
 "Powerline, a status line on steriods
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 "Coffee Script  syntax, indenting, compiling, and more.
