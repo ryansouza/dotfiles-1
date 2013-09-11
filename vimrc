@@ -236,6 +236,7 @@ nnoremap <Leader>n :NERDTreeToggle<cr>
 "only ever show syntastic tooltips
 if has('gui_running')
   set balloonexpr=SyntasticErrorBalloonExpr()
+  autocmd FileType ruby set balloonexpr=SyntasticErrorBalloonExpr()
 endif
 
 "make git gutter more performant by only updating focused tab
