@@ -233,7 +233,11 @@ map! <Leader>wt <esc>:%s/\v\s+$//<CR>i
 nnoremap <Leader>b :BufExplorer<cr>
 nnoremap <Leader>n :NERDTreeToggle<cr>
 
-"never show me tooltips WTF
+"only ever show syntastic tooltips
 if has('gui_running')
-  set noballooneval
+  set balloonexpr=SyntasticErrorBalloonExpr()
+  autocmd BufNewFile,BufRead * set balloonexpr=SyntasticErrorBalloonExpr()
 endif
+
+"make git gutter more performant by only updating focused tab
+let g:gitgutter_eager=0
