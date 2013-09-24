@@ -65,6 +65,8 @@ Bundle 'vim-scripts/matchit.zip'
 Bundle 'wting/rust.vim'
 "Bats file highlighting
 Bundle 'rosstimson/bats.vim'
+"Helpers for surounding quotes/brackets
+Bundle 'tpope/vim-surround'
 
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -144,7 +146,7 @@ let g:syntastic_auto_loc_list=2
 "nerdtree settings
 let g:NERDTreeMouseMode = 2
 let g:NERDTreeWinSize = 40
-let g:NERDTreeIgnore=['\.DS_Store$', '\.vim$', '.d$[[dir]]', '\.rbc$', '\~$']
+let g:NERDTreeIgnore=['\.DS_Store$', '\.vim$', '\.d$[[dir]]', '\.rbc$', '\~$']
 let g:NERDTreeMapOpenSplit = 'i'
 
 "map Q to something useful
