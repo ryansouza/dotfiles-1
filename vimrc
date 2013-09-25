@@ -233,10 +233,14 @@ map! <Leader>wt <esc>:%s/\v\s+$//<CR>i
 nnoremap <Leader>b :BufExplorer<cr>
 nnoremap <Leader>n :NERDTreeToggle<cr>
 
-"only ever show syntastic tooltips
+"never ever use balloons for really reals
 if has('gui_running')
-  set balloonexpr=SyntasticErrorBalloonExpr()
-  autocmd BufNewFile,BufRead * set balloonexpr=SyntasticErrorBalloonExpr()
+  set noballooneval
+  set balloonexpr=
+  setlocal balloonexpr=
+  set balloondelay=100000
+  autocmd BufNewFile,BufRead * set balloonexpr=
+  let g:syntastic_enable_balloons = 0
 endif
 
 "make git gutter more performant by only updating focused tab
