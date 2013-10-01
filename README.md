@@ -3,6 +3,12 @@ dotfiles
 
 Home Sweet Home (directory).
 
+How to Make all the Symlinks:
+-----------------------------
+```
+$ ./link.sh
+```
+
 How to get Vim Working:
 -----------------------
 
