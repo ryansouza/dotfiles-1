@@ -14,3 +14,6 @@ ln -s $PWD/zshenv ~/.zshenv
 
 echo "Linking zshrc."
 ln -s $PWD/zshrc ~/.zshrc
+
+echo "Linking gitconfig."
+ln -s $PWD/gitconfig ~/.gitconfig
