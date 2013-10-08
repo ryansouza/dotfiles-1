@@ -246,4 +246,4 @@ if has('gui_running')
 endif
 
 "make git gutter more performant by only updating focused tab
-let g:gitgutter_eager=0
+let g:gitgutter_eager = 0

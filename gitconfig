@@ -1,0 +1,37 @@
+[include]
+  path = .github_token
+
+[user]
+	email = jrucker@engineyard.com
+	name = James Rucker
+
+[color]
+  ui = auto
+
+[core]
+  excludesfile = ~/.gitignore
+
+[log]
+  date = local
+
+[diff]
+  renameLimit = 0
+  renames = copy
+
+[rerere]
+  enabled = true
+
+[merge]
+  log = true
+  conflictstyle = diff3
+
+[push]
+  default = current
+
+[status]
+  submodulesummary = true
+[alias]
+  st = status
+  ci = commit
+        br = branch
+        co = checkout
