@@ -15,6 +15,10 @@ setopt transient_rprompt
 
 typeset -ga precmd_functions
 
+unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/helpfiles
+
 HISTFILE=${HOME}/.history
 HISTSIZE=8192
 SAVEHIST=8192
@@ -35,7 +39,7 @@ precmd_functions+='vcs_info'
 PROMPT='%m%F{81}:%F{246}%32<...<%~${vcs_info_msg_0_}%F{246}$%F{reset} '
 RPROMPT='%F{236}(%F{81}%*%F{236})%F{reset}'
 
-fpath=(/usr/local/share/zsh-completions $fpath)
+fpath=(/usr/local/share/zsh/site-functions $fpath)
 
 alias b="bundle-hack"
 alias be="bundle exec"
@@ -44,5 +48,3 @@ alias vp="vagrant provision"
 alias reado="\`~/bin/ssh-reagent\`"
 
 bindkey -e
-
-chruby 1.9.3
