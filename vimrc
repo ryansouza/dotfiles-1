@@ -55,7 +55,7 @@ Bundle 'tpope/vim-repeat'
 Bundle 'vim-ruby/vim-ruby'
 "Awesome buffer explorer
 Bundle 'vim-scripts/bufexplorer.zip'
-"Noone likes you matchit! (automatically adds closing parens and such)
+"Noone likes you delimitMate! (automatically adds closing parens and such)
 "Bundle 'vim-scripts/delimitMate.vim'
 "shows 'Nth match out of M'
 Bundle 'vim-scripts/IndexedSearch'
