@@ -17,3 +17,6 @@ ln -s $PWD/zshrc ~/.zshrc
 
 echo "Linking gitconfig."
 ln -s $PWD/gitconfig ~/.gitconfig
+
+echo "Linking tmux.conf."
+ln -s $PWD/tmux.conf ~/.tmux.conf
