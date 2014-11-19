@@ -15,20 +15,24 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 "The solarized color scheme
 Plugin 'altercation/vim-colors-solarized'
+"Airline, a light version of Powerline, a status line on steriods
+Plugin 'bling/vim-airline'
 "TOML Syntax, used by Rust's Cargo
 Plugin 'cespare/vim-toml'
 "Mirror of the official golang vim bundle
 Plugin 'jnwhiteh/vim-golang'
-"Airline, a light version of Powerline, a status line on steriods
-Plugin 'bling/vim-airline'
 "Coffee Script  syntax, indenting, compiling, and more.
 Plugin 'kchmck/vim-coffee-script'
+"Ctrl-P, a fuzzy finder for vim
+Plugin 'kien/ctrlp.vim'
 "Ack plugin, like Ackmate but for Vim
 Plugin 'mileszs/ack.vim'
 "Adds the Jellybeans color scheme
 Plugin 'nanotech/jellybeans.vim'
 "Sytnax etc for Handlebars templates
 Plugin 'nono/vim-handlebars'
+"Bats file highlighting
+Plugin 'rosstimson/bats.vim'
 "Visualize your undo tree (:GundoToggle)
 Plugin 'sjl/gundo.vim'
 "comment stuff out like a pro
@@ -37,8 +41,6 @@ Plugin 'scrooloose/nerdcommenter.git'
 Plugin 'scrooloose/nerdtree.git'
 "super awesome syntax checking plugin
 Plugin 'scrooloose/syntastic.git'
-"Peepopen! Hurray!
-Plugin 'topfunky/PeepOpen-EditorSupport', {'rtp': 'vim-peepopen/'}
 "adds end where you might want it in ruby (like if, def, etc)
 Plugin 'tpope/vim-endwise'
 "awesome unix-y vim commands, including :SudoWrite
@@ -53,6 +55,8 @@ Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
 "extends the . command to also repeat plugin commands (not just native)
 Plugin 'tpope/vim-repeat'
+"Helpers for surounding quotes/brackets
+Plugin 'tpope/vim-surround'
 "Ruby syntax etc. for vim
 Plugin 'vim-ruby/vim-ruby'
 "Awesome buffer explorer
@@ -65,10 +69,6 @@ Plugin 'vim-scripts/IndexedSearch'
 Plugin 'vim-scripts/matchit.zip'
 "Rust syntax & indent settings
 Plugin 'wting/rust.vim'
-"Bats file highlighting
-Plugin 'rosstimson/bats.vim'
-"Helpers for surounding quotes/brackets
-Plugin 'tpope/vim-surround'
 
 " All plugins specified
 call vundle#end()
@@ -144,6 +144,10 @@ set laststatus=2
 "vim-airline settings
 let g:airline_powerline_fonts = 1
 let g:airline_theme='jellybeans'
+
+"ctrlp settings
+let g:ctrlp_map = '<Leader>p'
+let g:ctrlp_cmd = 'CtrlPMixed'
 
 "syntastic settings
 let g:syntastic_enable_signs=1
