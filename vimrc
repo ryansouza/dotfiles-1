@@ -6,67 +6,78 @@ filetype off
 
 "Setup the vundles!
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
 "manage vundle with vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 "Shows the git diff status in the 'gutter' column
-Bundle 'airblade/vim-gitgutter'
+Plugin 'airblade/vim-gitgutter'
 "The solarized color scheme
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
+"TOML Syntax, used by Rust's Cargo
+Plugin 'cespare/vim-toml'
 "Mirror of the official golang vim bundle
-Bundle 'jnwhiteh/vim-golang'
-"Powerline, a status line on steriods
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'jnwhiteh/vim-golang'
+"Airline, a light version of Powerline, a status line on steriods
+Plugin 'bling/vim-airline'
 "Coffee Script  syntax, indenting, compiling, and more.
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'kchmck/vim-coffee-script'
 "Ack plugin, like Ackmate but for Vim
-Bundle 'mileszs/ack.vim'
+Plugin 'mileszs/ack.vim'
 "Adds the Jellybeans color scheme
-Bundle 'nanotech/jellybeans.vim'
+Plugin 'nanotech/jellybeans.vim'
 "Sytnax etc for Handlebars templates
-Bundle 'nono/vim-handlebars'
+Plugin 'nono/vim-handlebars'
 "Visualize your undo tree (:GundoToggle)
-Bundle 'sjl/gundo.vim'
+Plugin 'sjl/gundo.vim'
 "comment stuff out like a pro
-Bundle 'scrooloose/nerdcommenter.git'
+Plugin 'scrooloose/nerdcommenter.git'
 "textmate-like file browser drawer
-Bundle 'scrooloose/nerdtree.git'
+Plugin 'scrooloose/nerdtree.git'
 "super awesome syntax checking plugin
-Bundle 'scrooloose/syntastic.git'
+Plugin 'scrooloose/syntastic.git'
 "Peepopen! Hurray!
-Bundle 'topfunky/PeepOpen-EditorSupport', {'rtp': 'vim-peepopen/'}
+Plugin 'topfunky/PeepOpen-EditorSupport', {'rtp': 'vim-peepopen/'}
 "adds end where you might want it in ruby (like if, def, etc)
-Bundle 'tpope/vim-endwise'
+Plugin 'tpope/vim-endwise'
 "awesome unix-y vim commands, including :SudoWrite
-Bundle 'tpope/vim-eunuch.git'
+Plugin 'tpope/vim-eunuch.git'
 "In-vim git wrapper, :Gblame, etc
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 "syntax, indent, and filetype for git*
-Bundle 'tpope/vim-git'
+Plugin 'tpope/vim-git'
 "Vim syntax for markdown
-Bundle 'tpope/vim-markdown'
+Plugin 'tpope/vim-markdown'
 "tons of commands to Vim up the Rails, so awesome!!
-Bundle 'tpope/vim-rails'
+Plugin 'tpope/vim-rails'
 "extends the . command to also repeat plugin commands (not just native)
-Bundle 'tpope/vim-repeat'
+Plugin 'tpope/vim-repeat'
 "Ruby syntax etc. for vim
-Bundle 'vim-ruby/vim-ruby'
+Plugin 'vim-ruby/vim-ruby'
 "Awesome buffer explorer
-Bundle 'vim-scripts/bufexplorer.zip'
+Plugin 'vim-scripts/bufexplorer.zip'
 "Noone likes you delimitMate! (automatically adds closing parens and such)
-"Bundle 'vim-scripts/delimitMate.vim'
+"Plugin 'vim-scripts/delimitMate.vim'
 "shows 'Nth match out of M'
-Bundle 'vim-scripts/IndexedSearch'
+Plugin 'vim-scripts/IndexedSearch'
 "Extends % to do the right thing in HTML & LaTeX among others
-Bundle 'vim-scripts/matchit.zip'
+Plugin 'vim-scripts/matchit.zip'
 "Rust syntax & indent settings
-Bundle 'wting/rust.vim'
+Plugin 'wting/rust.vim'
 "Bats file highlighting
-Bundle 'rosstimson/bats.vim'
+Plugin 'rosstimson/bats.vim'
 "Helpers for surounding quotes/brackets
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
+
+" All plugins specified
+call vundle#end()
+
+"load ftplugins and indent files
+filetype plugin indent on
+
+"turn on syntax highlighting
+syntax on
 
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -117,13 +128,6 @@ set scrolloff=3
 set sidescrolloff=7
 set sidescroll=1
 
-"load ftplugins and indent files
-filetype plugin on
-filetype indent on
-
-"turn on syntax highlighting
-syntax on
-
 "some stuff to get the mouse going in term
 set mouse=a
 set ttymouse=xterm2
@@ -134,10 +138,12 @@ set t_Co=256
 "hide buffers when not displayed
 set hidden
 
-if has("statusline")
-  set statusline=%<%F\ %#ErrorMsg#%{fugitive#statusline()}%#StatusLine#%=%([%M%R%H%W]\ %)%l,%c%V\ %P\ (%n)
-  set laststatus=2
-endif
+"always show the status line
+set laststatus=2
+
+"vim-airline settings
+let g:airline_powerline_fonts = 1
+let g:airline_theme='jellybeans'
 
 "syntastic settings
 let g:syntastic_enable_signs=1
@@ -217,9 +223,6 @@ set autoread
 
 "set the leader to comma
 let mapleader = ","
-
-" Vim-powerline
-let g:Powerline_symbols = 'fancy'
 
 "stop wrappin'
 set nowrap
