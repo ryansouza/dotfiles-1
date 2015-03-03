@@ -27,6 +27,8 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
 "Ack plugin, like Ackmate but for Vim
 Plugin 'mileszs/ack.vim'
+"Coffee Script React JSX file syntax highlighting
+Plugin 'mtscout6/vim-cjsx'
 "Adds the Jellybeans color scheme
 Plugin 'nanotech/jellybeans.vim'
 "Sytnax etc for Handlebars templates
@@ -156,7 +158,7 @@ let g:syntastic_auto_loc_list=2
 "nerdtree settings
 let g:NERDTreeMouseMode = 2
 let g:NERDTreeWinSize = 40
-let g:NERDTreeIgnore=['\.DS_Store$', '\.vim$', '\.d$[[dir]]', '\.rbc$', '\~$']
+let g:NERDTreeIgnore=['\.DS_Store$', '\.vim$', '\.rbc$', '\~$']
 let g:NERDTreeMapOpenSplit = 'i'
 
 "map Q to something useful
