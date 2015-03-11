@@ -149,7 +149,6 @@ let g:airline_theme='jellybeans'
 
 "ctrlp settings
 let g:ctrlp_map = '<Leader>p'
-let g:ctrlp_cmd = 'CtrlPMixed'
 
 "syntastic settings
 let g:syntastic_enable_signs=1
