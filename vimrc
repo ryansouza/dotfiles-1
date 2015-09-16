@@ -255,3 +255,9 @@ endif
 
 "make git gutter more performant by only updating focused tab
 let g:gitgutter_eager = 0
+
+"alias such that :Ack will no longer auto-open first result
+ca Ack Ack!
+
+"quickly ack for hovered word with <leader>ack
+nmap <leader>ack :Ack! <cword>
