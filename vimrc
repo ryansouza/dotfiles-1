@@ -27,8 +27,6 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'kien/ctrlp.vim'
 "Ack plugin, like Ackmate but for Vim
 Plugin 'mileszs/ack.vim'
-"Coffee Script React JSX file syntax highlighting
-Plugin 'mtscout6/vim-cjsx'
 "Adds the Jellybeans color scheme
 Plugin 'nanotech/jellybeans.vim'
 "Sytnax etc for Handlebars templates
@@ -71,6 +69,9 @@ Plugin 'vim-scripts/IndexedSearch'
 Plugin 'vim-scripts/matchit.zip'
 "Rust syntax & indent settings
 Plugin 'wting/rust.vim'
+"React syntax & indent (requires vim-javascript)
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
 
 " All plugins specified
 call vundle#end()
@@ -153,6 +154,7 @@ let g:ctrlp_map = '<Leader>p'
 "syntastic settings
 let g:syntastic_enable_signs=1
 let g:syntastic_auto_loc_list=2
+let g:syntastic_javascript_checkers = ['eslint']
 
 "nerdtree settings
 let g:NERDTreeMouseMode = 2
@@ -242,6 +244,7 @@ map! <Leader>wt <esc>:%s/\v\s+$//<CR>i
 "shortcuts for Buffer Explorer and NERDTree
 nnoremap <Leader>b :BufExplorer<cr>
 nnoremap <Leader>n :NERDTreeToggle<cr>
+nnoremap <Leader>N :NERDTreeFind<cr>
 
 "never ever use balloons for really reals
 if has('gui_running')
