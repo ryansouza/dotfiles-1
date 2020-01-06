@@ -11,20 +11,21 @@ call vundle#begin()
 "manage vundle with vundle
 Plugin 'gmarik/Vundle.vim'
 
+"Open `file:line` style paths
+Plugin 'bogado/file-line'
 "Shows the git diff status in the 'gutter' column
 Plugin 'airblade/vim-gitgutter'
 "The solarized color scheme
 Plugin 'altercation/vim-colors-solarized'
 "Airline, a light version of Powerline, a status line on steriods
 Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 "TOML Syntax, used by Rust's Cargo
 Plugin 'cespare/vim-toml'
 "Mirror of the official golang vim bundle
 Plugin 'jnwhiteh/vim-golang'
 "Coffee Script  syntax, indenting, compiling, and more.
 Plugin 'kchmck/vim-coffee-script'
-"Ctrl-P, a fuzzy finder for vim
-Plugin 'kien/ctrlp.vim'
 "Ack plugin, like Ackmate but for Vim
 Plugin 'mileszs/ack.vim'
 "Adds the Jellybeans color scheme
@@ -72,6 +73,9 @@ Plugin 'wting/rust.vim'
 "React syntax & indent (requires vim-javascript)
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
+
+set rtp+=/usr/local/opt/fzf
+Plugin 'junegunn/fzf.vim'
 
 " All plugins specified
 call vundle#end()
@@ -246,6 +250,8 @@ nnoremap <Leader>b :BufExplorer<cr>
 nnoremap <Leader>n :NERDTreeToggle<cr>
 nnoremap <Leader>N :NERDTreeFind<cr>
 
+nnoremap <Leader>p :FZF --tiebreak=end,length<cr>
+
 "never ever use balloons for really reals
 if has('gui_running')
   set noballooneval
@@ -258,3 +264,6 @@ endif
 
 "make git gutter more performant by only updating focused tab
 let g:gitgutter_eager = 0
+
+"save all buffers when gvim loses focus
+au FocusLost * silent! wa
